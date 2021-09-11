@@ -7,8 +7,9 @@ import {
   peopleRoutes,
   planetRoutes,
   filmRoutes,
-  speciesRoutes,
+  specieRoutes,
   vehicleRoutes,
+  starshipRoutes,
 } from "./routes";
 
 export let server: Server;
@@ -22,8 +23,9 @@ export const init = async function (): Promise<Server> {
   server.route(peopleRoutes);
   server.route(planetRoutes);
   server.route(filmRoutes);
-  server.route(speciesRoutes);
+  server.route(specieRoutes);
   server.route(vehicleRoutes);
+  server.route(starshipRoutes);
 
   return server;
 };

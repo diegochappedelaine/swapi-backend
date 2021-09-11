@@ -4,7 +4,7 @@ import {
   ResponseObject,
   ServerRoute,
 } from "@hapi/hapi";
-import { SwapiRessources, Specie } from "../types";
+import { SwapiRessources, Sharship } from "../types";
 import { fetchApiRoute } from "../utils/fetch-api";
 
 async function fetchDatas(
@@ -12,8 +12,8 @@ async function fetchDatas(
   h: ResponseToolkit
 ): Promise<ResponseObject> {
   const response = h.response(
-    await fetchApiRoute<Specie>(
-      SwapiRessources.SPECIES,
+    await fetchApiRoute<Sharship>(
+      SwapiRessources.STARSHIPS,
       request.params.id,
       request.query.page
     )
@@ -21,17 +21,17 @@ async function fetchDatas(
   return response;
 }
 
-const speciesRoutes: ServerRoute[] = [
+const starshipRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/specie",
+    path: "/starship",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/specie/{id}",
+    path: "/starship/{id}",
     handler: fetchDatas,
   },
 ];
 
-export default speciesRoutes;
+export default starshipRoutes;

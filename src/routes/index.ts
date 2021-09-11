@@ -1,7 +1,15 @@
 import peopleRoutes from "./people";
 import planetRoutes from "./planet";
-import filmRoutes from "./films";
-import speciesRoutes from "./species";
-import vehicleRoutes from "./vehicles";
+import filmRoutes from "./film";
+import specieRoutes from "./specie";
+import vehicleRoutes from "./vehicle";
+import starshipRoutes from "./starship";
 
-export { peopleRoutes, planetRoutes, filmRoutes, speciesRoutes, vehicleRoutes };
+export {
+  peopleRoutes,
+  planetRoutes,
+  filmRoutes,
+  specieRoutes,
+  vehicleRoutes,
+  starshipRoutes,
+};
