@@ -4,6 +4,7 @@ import filmRoutes from "./film";
 import specieRoutes from "./specie";
 import vehicleRoutes from "./vehicle";
 import starshipRoutes from "./starship";
+import searchRoutes from "./search";
 
 export {
   peopleRoutes,
@@ -12,4 +13,5 @@ export {
   specieRoutes,
   vehicleRoutes,
   starshipRoutes,
+  searchRoutes,
 };

@@ -6,8 +6,6 @@ export const fetchApiRoute = async <T>(
   id: string | undefined,
   page: string | undefined
 ) => {
-  // handle no-result error
-
   let url = `https://swapi.dev/api/${ressource}/`;
   if (id) {
     url += id;
@@ -18,4 +16,13 @@ export const fetchApiRoute = async <T>(
 
   const response = await axios.get<SwapiResponseScheme & { results: T }>(url);
   return response.data;
+};
+
+export const fetchSearchResults = async <T>(
+  ressource: SwapiRessources,
+  value: string
+) => {
+  const url = `https://swapi.dev/api/${ressource}/?search=${value}`;
+
+  return (await axios.get<SwapiResponseScheme & { results: T }>(url)).data;
 };
