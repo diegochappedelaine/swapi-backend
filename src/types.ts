@@ -57,7 +57,7 @@ export interface GetPlanets extends SwapiResponseScheme {
   results: Planet[];
 }
 
-export type Movie = {
+export type Film = {
   title: string;
   episode_id: number;
   opening_crawl: string;
@@ -74,8 +74,8 @@ export type Movie = {
   url: string;
 };
 
-export interface GetMovies extends SwapiResponseScheme {
-  results: Movie[];
+export interface GetFilms extends SwapiResponseScheme {
+  results: Film[];
 }
 
 export type Specie = {

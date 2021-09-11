@@ -1,5 +1,5 @@
-import helloRoutes from "./hello";
 import peopleRoutes from "./people";
 import planetRoutes from "./planet";
+import filmRoutes from "./films";
 
-export { helloRoutes, peopleRoutes, planetRoutes };
+export { peopleRoutes, planetRoutes, filmRoutes };

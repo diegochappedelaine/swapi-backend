@@ -1,16 +1,11 @@
 "use strict";
 
 import Hapi from "@hapi/hapi";
-import { Server, Request } from "@hapi/hapi";
+import { Server } from "@hapi/hapi";
 
-import { helloRoutes, peopleRoutes, planetRoutes } from "./routes";
+import { peopleRoutes, planetRoutes, filmRoutes } from "./routes";
 
 export let server: Server;
-
-function index(request: Request): string {
-  console.log("Processing request", request.info.id);
-  return "Hello! Nice to have met you.";
-}
 
 export const init = async function (): Promise<Server> {
   server = Hapi.server({
@@ -18,9 +13,9 @@ export const init = async function (): Promise<Server> {
     host: "localhost",
   });
 
-  server.route(helloRoutes);
   server.route(peopleRoutes);
   server.route(planetRoutes);
+  server.route(filmRoutes);
 
   return server;
 };
