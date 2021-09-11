@@ -1,7 +1,7 @@
 "use strict";
 
-import Hapi from "@hapi/hapi";
-import { Server } from "@hapi/hapi";
+import Hapi, { Server } from "@hapi/hapi";
+require("dotenv").config();
 
 import {
   peopleRoutes,
@@ -18,7 +18,7 @@ export let server: Server;
 export const init = async function (): Promise<Server> {
   server = Hapi.server({
     port: process.env.PORT || 4000,
-    host: "localhost",
+    host: "0.0.0.0",
   });
 
   server.route(peopleRoutes);
