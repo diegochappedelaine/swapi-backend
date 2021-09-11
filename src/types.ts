@@ -100,7 +100,7 @@ export interface GetSpecies extends SwapiResponseScheme {
   results: Specie[];
 }
 
-type Vehicle = {
+export type Vehicle = {
   name: string;
   model: string;
   manufacturer: string;

@@ -3,7 +3,13 @@
 import Hapi from "@hapi/hapi";
 import { Server } from "@hapi/hapi";
 
-import { peopleRoutes, planetRoutes, filmRoutes } from "./routes";
+import {
+  peopleRoutes,
+  planetRoutes,
+  filmRoutes,
+  speciesRoutes,
+  vehicleRoutes,
+} from "./routes";
 
 export let server: Server;
 
@@ -16,6 +22,8 @@ export const init = async function (): Promise<Server> {
   server.route(peopleRoutes);
   server.route(planetRoutes);
   server.route(filmRoutes);
+  server.route(speciesRoutes);
+  server.route(vehicleRoutes);
 
   return server;
 };

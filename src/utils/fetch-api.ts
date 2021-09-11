@@ -1,9 +1,3 @@
-import {
-  Request,
-  ResponseToolkit,
-  ResponseObject,
-  ServerRoute,
-} from "@hapi/hapi";
 import { SwapiRessources, SwapiResponseScheme } from "../types";
 import axios from "axios";
 
@@ -12,6 +6,8 @@ export const fetchApiRoute = async <T>(
   id: string | undefined,
   page: string | undefined
 ) => {
+  // handle no-result error
+
   let url = `https://swapi.dev/api/${ressource}/`;
   if (id) {
     url += id;
