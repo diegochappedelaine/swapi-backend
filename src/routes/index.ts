@@ -1,3 +1,5 @@
 import helloRoutes from "./hello";
+import peopleRoutes from "./people";
+import planetRoutes from "./planet";
 
-export { helloRoutes };
+export { helloRoutes, peopleRoutes, planetRoutes };

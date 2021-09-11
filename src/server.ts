@@ -3,7 +3,7 @@
 import Hapi from "@hapi/hapi";
 import { Server, Request } from "@hapi/hapi";
 
-import { helloRoutes } from "./routes";
+import { helloRoutes, peopleRoutes, planetRoutes } from "./routes";
 
 export let server: Server;
 
@@ -19,8 +19,8 @@ export const init = async function (): Promise<Server> {
   });
 
   server.route(helloRoutes);
-
-  // Routes will go here
+  server.route(peopleRoutes);
+  server.route(planetRoutes);
 
   return server;
 };

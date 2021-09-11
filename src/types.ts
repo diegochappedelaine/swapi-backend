@@ -7,7 +7,7 @@ export enum SwapiRessources {
   STARSHIPS = "starships",
 }
 
-interface SwapiResponseScheme {
+export interface SwapiResponseScheme {
   count: number;
   next: null | string;
   previous: null | string;

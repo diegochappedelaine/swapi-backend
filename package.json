@@ -4,7 +4,8 @@
   "main": "lib/main.js",
   "license": "MIT",
   "dependencies": {
-    "@hapi/hapi": "^20.1.5"
+    "@hapi/hapi": "^20.1.5",
+    "axios": "^0.21.4"
   },
   "scripts": {
     "dev:tsc": "tsc --watch -p .",
