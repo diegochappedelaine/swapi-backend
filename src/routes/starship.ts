@@ -11,14 +11,13 @@ async function fetchDatas(
   request: Request,
   h: ResponseToolkit
 ): Promise<ResponseObject> {
-  const response = h.response(
-    await fetchApiRoute<Sharship>(
-      SwapiRessources.STARSHIPS,
-      request.params.id,
-      request.query.page
-    )
+  const result = await fetchApiRoute<Sharship>(
+    SwapiRessources.STARSHIPS,
+    request.params.id,
+    request.query.page
   );
-  return response;
+
+  return h.response(result);
 }
 
 const starshipRoutes: ServerRoute[] = [
