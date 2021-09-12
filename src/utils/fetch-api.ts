@@ -14,7 +14,7 @@ export const fetchApiRoute = async <T>(
     url += `?page=${page}`;
   }
 
-  const response = await axios.get<SwapiResponseScheme & { results: T }>(url);
+  const response = await axios.get<SwapiResponseScheme & { results: T[] }>(url);
   return response.data;
 };
 
@@ -24,5 +24,6 @@ export const fetchSearchResults = async <T>(
 ) => {
   const url = `https://swapi.dev/api/${ressource}/?search=${value}`;
 
-  return (await axios.get<SwapiResponseScheme & { results: T }>(url)).data;
+  const response = await axios.get<SwapiResponseScheme & { results: T[] }>(url);
+  return response.data;
 };
