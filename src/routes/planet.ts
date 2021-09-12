@@ -23,12 +23,12 @@ async function fetchDatas(
 const planetRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/planet",
+    path: "/planets",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/planet/{id}",
+    path: "/planets/{id}",
     handler: fetchDatas,
   },
 ];

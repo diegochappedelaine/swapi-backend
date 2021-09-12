@@ -23,12 +23,12 @@ async function fetchDatas(
 const starshipRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/starship",
+    path: "/starships",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/starship/{id}",
+    path: "/starships/{id}",
     handler: fetchDatas,
   },
 ];

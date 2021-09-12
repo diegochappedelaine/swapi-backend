@@ -23,12 +23,12 @@ async function fetchDatas(
 const filmRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/film",
+    path: "/films",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/film/{id}",
+    path: "/films/{id}",
     handler: fetchDatas,
   },
 ];

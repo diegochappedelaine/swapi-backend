@@ -23,12 +23,12 @@ async function fetchDatas(
 const vehicleRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/vehicle",
+    path: "/vehicles",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/vehicle/{id}",
+    path: "/vehicles/{id}",
     handler: fetchDatas,
   },
 ];

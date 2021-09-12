@@ -23,12 +23,12 @@ async function fetchDatas(
 const specieRoutes: ServerRoute[] = [
   {
     method: "GET",
-    path: "/specie",
+    path: "/species",
     handler: fetchDatas,
   },
   {
     method: "GET",
-    path: "/specie/{id}",
+    path: "/species/{id}",
     handler: fetchDatas,
   },
 ];
